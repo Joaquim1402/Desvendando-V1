@@ -1,56 +1,28 @@
-# Desvendando o Céu Austral — site institucional
+# Site HTML estático — Desvendando o Céu Austral
 
-Site responsivo do Museu de Ciências Desvendando o Céu Austral, iniciativa de extensão da Universidade Federal Rural de Pernambuco (UFRPE).
+Esta pasta é uma versão estática, independente e responsiva do site institucional. Não precisa de React, npm, servidor Node ou bibliotecas externas para funcionar.
 
-## Conteúdo incluído
+## Como visualizar
+- Abra `index.html` no navegador.
+- As fotografias são locais e estão em `assets/`, portanto o site não depende de imagens remotas para a galeria e o conteúdo principal.
 
-- Proposta de popularização da ciência e formação de monitores.
-- Linha do tempo com registros públicos desde 2014, passando pelas mostras e ações itinerantes, visitas ao OASI, eventos de divulgação e inauguração do Museu em 2026.
-- Descrições de observações astronômicas, oficinas de foguetes, teatro científico, mediação, palestras, visitas técnicas e ações itinerantes.
-- Seção sobre o Observatório Astronômico do Sertão de Itaparica (OASI), a cooperação com o Observatório Nacional e a relação com a Semana POP.
-- Contextualização das ações educativas ligadas a Santa Filomena e ao Meteorito Serra do Magé, em Alagoinha.
-- Galeria baseada no acervo local de 16 fotografias recebido no projeto e na fotografia da equipe diante da cúpula do observatório. As imagens de conteúdo foram convertidas para WebP para reduzir o peso e melhorar o carregamento em celulares.
-- Contatos, WhatsApp, Instagram e e-mail do Museu.
-- Links de referência para notícias institucionais da UFRPE, Observatório Nacional, ALEPE e outros registros de atividades.
+## Como publicar
+Para hospedagem estática (por exemplo GitHub Pages, Netlify ou servidor institucional), envie **todo o conteúdo desta pasta** — `index.html`, `favicon.svg`, `README.md` e `assets/` — para a pasta pública do projeto. Não envie somente o arquivo HTML, pois as fotografias são arquivos separados.
 
-## Desenvolvimento local
+## Recursos
+- Layout mobile-first, menu móvel e botões com área adequada para toque.
+- Galeria com visualização ampliada, fechamento por toque fora da imagem ou tecla Escape e bloqueio da rolagem de fundo.
+- Imagens WebP do acervo local do projeto, carregadas sob demanda quando apropriado.
+- Linha do tempo, descrição das atividades, seção do OASI, parcerias, fontes e contatos oficiais.
+- A página distingue registros documentados de inferências e não presume que toda cooperação configure convênio formal permanente.
 
-O projeto usa Vite, React, TypeScript, TanStack Start, Tailwind CSS e lucide-react. Para executar localmente, instale as dependências e rode o servidor de desenvolvimento:
-
-```sh
-npm install
-npm run dev
-```
-
-Para gerar a versão de produção:
-
-```sh
-npm run build
-```
-
-## Observação editorial
-
-O site distingue cooperações e ações documentadas de convênios jurídicos específicos: não presume que todas as atividades sejam regidas por um instrumento formal permanente. As datas e registros históricos têm links para fontes públicas quando disponíveis.
-
-
-## Ajustes para celular
-
-- Navegação móvel com área rolável, botões táteis maiores e fechamento automático após selecionar uma seção.
-- Layout mobile-first, textos ajustados para telas estreitas, ancoragem de seções considerando a barra fixa e suporte a áreas seguras do telefone.
-- Galeria com visualização ampliada; a imagem pode ser fechada tocando fora dela ou pressionando Escape em teclado.
-- Imagens locais de atividades servidas em WebP para economizar transferência de dados.
-
-
-## Versão HTML estática (sem React)
-
-A pasta `site-html/` contém uma versão completa em HTML, CSS e JavaScript nativo. Ela é independente das dependências do aplicativo React e usa imagens locais do acervo. Para testar, abra `site-html/index.html`. Para hospedar apenas a versão estática, envie todo o conteúdo de `site-html/` para a raiz pública do serviço de hospedagem; mantenha a subpasta `assets/` ao lado de `index.html`. Consulte `site-html/README.md` para instruções.
-
+## Fontes
+Os links institucionais e históricos estão listados na seção “Consulte as fontes e os registros” da página.
 
 ## Identidade visual
+Identidade em azul claro (#2AA3CE) e branco, a partir do logo do projeto. O ícone do título é um selo azul com os anéis do logo e o Cruzeiro do Sul em branco (`assets/southern-cross.svg`, também usado como favicon). Variações: `southern-cross-white.svg`, `southern-cross-blue.svg` e `hero-cross.svg`. Os logos enviados estão em `assets/logo-desvendando-horizontal.png` e `assets/logo-desvendando-vertical.png`.
 
-O cabeçalho, o rodapé e os favicons usam agora o Cruzeiro do Sul representado somente pelas cinco estrelas, sem aro circular, retícula ou enfeites. O título do site também foi padronizado sem glifos decorativos.
-
-
-## Identidade visual (atualização)
-
-Paleta azul claro (#2AA3CE) e branco, baseada no logo do projeto; selo da marca com os anéis do logo e o Cruzeiro do Sul (`src/components/SouthernCross.tsx`). A versão estática correspondente está em `site-html/`. Rodapé: "Museu de Astronomia".
+## Organização da página
+- Menu com destaque da seção atual e botão "Fale conosco".
+- "O projeto" com resumo visível e história completa recolhível.
+- Atividades com filtros por tema; galeria com botão "Ver mais fotos"; fontes recolhidas em "Ver as fontes e registros".
